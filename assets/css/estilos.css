@@ -1,33 +1,33 @@
 *, *::before, *::after {
-  box-sizing: border-box;
-}
-
-@font-face {
-    font-family: 'icones';
-    src: url(../font/icones.ttf);
-}
+    box-sizing: border-box;
+  }
   
-body {
-    background-color: var(--background);
-    font-family: 'Open Sans', 'icones', sans-serif;
-    color: var(--font);
-}
+  @font-face {
+      font-family: 'icones';
+      src: url(../font/icones.ttf);
+  }
   
-@media screen and (min-width: 1440px) {
-    body {
-        display: grid;
-        grid-template-columns: auto 1fr;
-    }
-}
+  body {
+      background-color: var(--background);
+      font-family: 'Open Sans', 'icones', sans-serif;
+      color: var(--font);
+  }
   
-.cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--cabecalho);
-    padding: 0.5em 1em;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
-}
+  @media screen and (min-width: 1440px) {
+      body {
+          display: grid;
+          grid-template-columns: auto 1fr;
+      }
+  }
+  
+  .cabecalho {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--cabecalho);
+      padding: 0.5em 1em;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+  }
   
   .cabecalho__menu i::before {
       content: "\e904";
@@ -655,4 +655,5 @@ body {
           display: block;
       }
   }
+  
   
