@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigri | Portifólio | Videos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="assets/css/cor.css">
+    <script src="https://kit.fontawesome.com/e85ea023b4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <button class="cabecalho__menu" aria-label="Menu"><i></i></button>
+        <div class="search-bar__container">
+            <div class="search-bar">
+                <input type="text" class="search-bar__input" placeholder="Enter your search!" aria-label="search">
+                <button class="search-bar__botao" aria-label="submit search"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></i></button>
+            </div>
+        </div>
+        <div class="cabecalho__perfil cabecalho__perfil--ativo">Raphael Nigri
+            <div class="perfil__dropdown">
+                <div class="perfil__secundario dropdown__content">Perfil 2</div>
+                <div class="perfil__secundario2 dropdown__content">Perfil 3</div>
+                <p class="gerenciar-perfis dropdown__content"><i class="fa-solid fa-user icon--dropdown"></i>Gerenciar Perfis</p>
+                <p class="conta dropdown__content"><i class="fa-regular fa-address-card icon--dropdown"></i>Conta</p>
+                <p class="sair dropdown__content"><i class="fa-solid fa-door-open icon--dropdown"></i>Sair da conta</p>
+            </div>
+        </div>
+        <button class="cabecalho__notificacao" aria-label="Notificação"><i></i></button>
+    </header>
+    <nav class="menu-lateral">
+        <img class="menu-lateral__logo" src="assets/img/logo.png" alt="Logotipo da Nigriflix" >
+        <p class="logo--texto">Nigriflix</p>
+        <a href="#" class="menu-lateral__link menu-lateral__link--inicio">Início</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--videos menu-lateral__link--ativo">Vídeos</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--filmes">Filmes</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--animes">Animes</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--seusvideos">Seus Vídeos</a>
+        <a href="#" class="menu-lateral__link menu-lateral__link--camisas">Perfil</a>
+    </nav>
+    <main>
+        <h1>Vídeos</h1>
+        <article class="cartao cartao--destaque">
+            <img src="assets/img/banner-mobile_2.png" alt="Banner do cartao" class="cartao__imagem--mobile">
+            <img src="assets/img/banner_2.png" alt="Banner do cartao" class="cartao__imagem--desktop">
+            <div class="cartao__conteudo">
+                <p class="cartao__anuncio">Vídeo em destaque</p>
+                <h3 class="cartao__titulo">Nigriflix - Título</h3>
+                <p class="cartao__autor">Autor</p>
+                <p class="cartao__info cartao__info--tempo">
+                    <i class="fa-regular fa-clock cartao__icone"></i>
+                    33
+                    <span class="cartao__info--texto">Minutos</span>
+                </p>
+                <p class="cartao__info cartao__info--visualizacao">
+                    <i class="fa-regular fa-eye cartao__icone"></i></i> 
+                    33
+                    <span class="cartao__info--texto">Visualizações</span></p>
+                <p class="cartao__info cartao__info--curtidas">
+                    <i class="fa-solid fa-thumbs-up cartao__icone"></i>
+                    42
+                    <span class="cartao__info--texto">Curtidas</span>
+                </p>
+                <button class="cartao__botao cartao__botao--destaque">Assistir agora</button>
+            </div>
+        </article>
+
+        <article class="cartao cartao--recentes videos-recentes">
+            <h3 class="cartao__titulo">Vídeos recentes</h3>
+
+            <ul class="cartao__lista">
+                <li class="cartao__item">
+                    <img src="assets/img/miniatura_1.png" alt="Thumbnail" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">Flix - Love Machine</h4>
+                    <p class="cartao__item-autor">Autor</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="assets/img/miniatura_2.png" alt="Thumbnail" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">Flix - The World</h4>
+                    <p class="cartao__item-autor">Autor</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="assets/img/miniatura_3.png" alt="Thumbnail" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">Flix - Skaterboy</h4>
+                    <p class="cartao__item-autor">Autor</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="assets/img/miniatura_4.png" alt="Thumbnail" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">Flix - Hot trend</h4>
+                    <p class="cartao__item-autor">Autor</p>
+                </li>
+                <li class="cartao__item">
+                    <img src="assets/img/miniatura_5.png" alt="Thumbnail" class="cartao__item-thumbnail">
+                    <h4 class="cartao__item-titulo">Flix - My music</h4>
+                    <p class="cartao__item-autor">Autor</p>
+                </li>
+            </ul>
+        </article>
+            
+        <section class="videos__container">
+            <h2 class="h2--slider">Em alta</h2>
+            <div class="progress__bar">
+                <span id="dot1" class="progress"></span>
+                <span id="dot2" class="progress"></span>
+                <span id="dot3" class="progress"></span>
+                <span id="dot4" class="progress"></span>
+            </div>
+            <div class="slider">
+                <article class="cartao cartao--carrossel">
+                    <img src="assets/img/video_1.png" alt="Vídeo" class="cartao__imagem">
+                    <div class="cartao__conteudo cartao__conteudo--carrossel">
+                        <p class="cartao__autor">Jokerlover</p>
+                        <h3 class="cartao__titulo">Nigriflix - The Joker</h3>
+                        <div class="cartao__info--carrossel">
+                            <p class="cartao__info cartao__info--tempo">
+                                <i class="fa-regular fa-clock cartao__icone"></i> 
+                                33
+                                <span class="cartao__info--texto--carrossel">Minutos</span>
+                            </p>
+                            <p class="cartao__info cartao__info--visualizacao">
+                                <i class="fa-regular fa-eye cartao__icone"></i></i>
+                                33
+                                <span class="cartao__info--texto--carrossel">Visualizações</span></p>
+                            <p class="cartao__info cartao__info--curtidas">
+                                <i class="fa-solid fa-thumbs-up cartao__icone"></i>
+                                42
+                                <span class="cartao__info--texto--carrossel">Curtidas</span>
+                            </p>
+                        </div>
+                        <button class="cartao__botao cartao__botao--carrossel" aria-label="Assistir agora"></button>
+                    </div>
+                </article>
+                <article class="cartao cartao--carrossel">
+                    <img src="assets/img/video_2.png" alt="Vídeo" class="cartao__imagem">
+                    <div class="cartao__conteudo cartao__conteudo--carrossel">
+                        <p class="cartao__autor">Você</p>
+                        <h3 class="cartao__titulo">Nigriflix - O seu filme!</h3>
+                        <div class="cartao__info--carrossel">
+                            <p class="cartao__info cartao__info--tempo">
+                                <i class="fa-regular fa-clock cartao__icone"></i>
+                                33
+                                <span class="cartao__info--texto--carrossel">Minutos</span>
+                            </p>
+                            <p class="cartao__info cartao__info--visualizacao">
+                                <i class="fa-regular fa-eye cartao__icone"></i></i>
+                                33
+                                <span class="cartao__info--texto--carrossel">Visualizações</span></p>
+                            <p class="cartao__info cartao__info--curtidas">
+                                <i class="fa-solid fa-thumbs-up cartao__icone"></i>
+                                42
+                                <span class="cartao__info--texto--carrossel">Curtidas</span>
+                            </p>
+                        </div>
+                        <button class="cartao__botao cartao__botao--carrossel" aria-label="Assistir agora"></button>
+                    </div>
+                </article>
+                    <article class="cartao cartao--carrossel">
+                    <img src="assets/img/video_3.png" alt="Vídeo" class="cartao__imagem">
+                    <div class="cartao__conteudo cartao__conteudo--carrossel">
+                        <p class="cartao__autor">Music_man</p>
+                        <h3 class="cartao__titulo">Nigriflix - Viva o Rock!</h3>
+                        <div class="cartao__info--carrossel">
+                            <p class="cartao__info cartao__info--tempo">
+                                <i class="fa-regular fa-clock cartao__icone"></i>
+                                33
+                                <span class="cartao__info--texto--carrossel">Minutos</span>
+                            </p>
+                            <p class="cartao__info cartao__info--visualizacao">
+                                <i class="fa-regular fa-eye cartao__icone"></i></i> 
+                                33
+                                <span class="cartao__info--texto--carrossel">Visualizações</span></p>
+                            <p class="cartao__info cartao__info--curtidas">
+                                <i class="fa-solid fa-thumbs-up cartao__icone"></i>
+                                42
+                                <span class="cartao__info--texto--carrossel">Curtidas</span>
+                            </p>
+                        </div>
+                        <button class="cartao__botao cartao__botao--carrossel" aria-label="Assistir agora"></button>
+                    </div>
+                </article>
+                 <article class="cartao cartao--carrossel">
+                    <img src="assets/img/video_4.png" alt="Vídeo" class="cartao__imagem">
+                    <div class="cartao__conteudo cartao__conteudo--carrossel">
+                        <p class="cartao__autor">TaysaBs</p>
+                        <h3 class="cartao__titulo">Nigriflix - Sunshine</h3>
+                        <div class="cartao__info--carrossel">
+                            <p class="cartao__info cartao__info--tempo">
+                                <i class="fa-regular fa-clock cartao__icone"></i>
+                                33
+                                <span class="cartao__info--texto--carrossel">Minutos</span>
+                            </p>
+                            <p class="cartao__info cartao__info--visualizacao">
+                                <i class="fa-regular fa-eye cartao__icone"></i></i> 
+                                33
+                                <span class="cartao__info--texto--carrossel">Visualizações</span></p>
+                            <p class="cartao__info cartao__info--curtidas">
+                                <i class="fa-solid fa-thumbs-up cartao__icone"></i>
+                                42
+                                <span class="cartao__info--texto--carrossel">Curtidas</span>
+                            </p>
+                        </div>
+                        <button class="cartao__botao cartao__botao--carrossel" aria-label="Assistir agora"></button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <footer>
+            
+
+        </footer>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
