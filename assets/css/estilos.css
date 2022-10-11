@@ -318,12 +318,11 @@
       background-color: var(--cartao);
       overflow: hidden;
   }
-  
+
   .cartao__imagem {
-      width: 100%;
-      max-height: 400px;
+      pointer-events: none;
   }
-  
+
   .cartao__imagem--mobile {
       max-height: 540px;
   }
@@ -635,7 +634,12 @@
       .slider{
           grid-column: span 3;
       }
-  
+
+      .cartao__imagem--carrossel {
+          width: 100%;
+          max-height: 400px;
+      }
+
       .videos__container{
           grid-column: span 3;
       }
