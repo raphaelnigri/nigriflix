@@ -1,5 +1,5 @@
-*, *::before, *::after {
-    box-sizing: border-box;
+  *, *::before, *::after {
+      box-sizing: border-box;
   }
   
   @font-face {
@@ -27,6 +27,9 @@
       background-color: var(--cabecalho);
       padding: 0.5em 1em;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+      width: 100%;
+      position: fixed;
+      z-index: 5;
   }
   
   .cabecalho__menu i::before {
@@ -81,6 +84,7 @@
           height: 80px;
           grid-column: 2;
           box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.7);
+          z-index: 3;
       }
   
       .cabecalho__menu {
@@ -212,10 +216,13 @@
       background-color: var(--menu-lateral);
       width: 70vw;
       height: 100vh;
-      position: absolute;
+      position: fixed;
+      top: 32px;
       left: -100vw;
       transition: .25s;
       box-shadow: inset -6px 0px 10px 0px rgba(0,0,0,0.7);
+      overflow-y: auto;
+      z-index: 4;
   }
   
   .menu-lateral--ativo {
@@ -287,7 +294,6 @@
   
   @media screen and (min-width: 1024px) {
       .menu-lateral {
-          position: fixed;
           top: 0;
           left: 0;
           width: 200px;
@@ -297,7 +303,7 @@
   }
   
   main {
-      padding: 24px 16px;
+      padding: 64px 16px;
       display: grid;
       gap: 16px;
   }
@@ -428,7 +434,7 @@
               "destaque destaque recentes"
               "carrossel-videos carrossel-videos carrossel-videos";
           column-gap: 32px;
-          padding: 16px 32px 0px 232px;
+          padding: 96px 32px 0px 232px;
           grid-column: 2;
       }
   
