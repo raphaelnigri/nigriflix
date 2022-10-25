@@ -37,51 +37,49 @@ slider.addEventListener('mousemove', (e) => {
 
 
 //*custom progress bar on carousel//
-const dot1 = document.querySelector('#dot1');
-const dot2 = document.querySelector('#dot2');
-const dot3 = document.querySelector('#dot3');
-const dot4 = document.querySelector('#dot4');
+const progressBar = document.querySelectorAll('.progress');
+
+function limpaProgresso(){
+  if(window.innerWidth < 1024){
+    for(let i of progressBar) {  
+      if(i.classList.contains("active")) i.classList.remove('active');
+    }
+  }
+  else{
+    for(let i of progressBar) {  
+      if(!i.classList.contains("active")) i.classList.add('active');
+    }
+  }
+ }
 
 function marcaProgresso(){
   if(window.innerWidth < 1024){
     if (slider.scrollLeft / (slider.offsetWidth * 4) < 0.25) {
-      if(!dot1.classList.contains("active")) dot1.classList.add("active");
-      if(dot2.classList.contains("active")) dot2.classList.remove("active");
-      if(dot3.classList.contains("active")) dot3.classList.remove("active");
-      if(dot4.classList.contains("active")) dot4.classList.remove("active");
+      limpaProgresso();
+      progressBar[0].classList.add("active");
     };
     if (slider.scrollLeft / (slider.offsetWidth * 4) >= 0.25 && slider.scrollLeft / (slider.offsetWidth * 4) < 0.5) {
-      if(dot1.classList.contains("active")) dot1.classList.remove("active");
-      if(!dot2.classList.contains("active")) dot2.classList.add("active");
-      if(dot3.classList.contains("active")) dot3.classList.remove("active");
-      if(dot4.classList.contains("active")) dot4.classList.remove("active");
+      limpaProgresso();
+      progressBar[1].classList.add("active");
     };
     if (slider.scrollLeft / (slider.offsetWidth * 4) >= 0.5 && slider.scrollLeft / (slider.offsetWidth * 4) < 0.75) {
-      if(dot1.classList.contains("active")) dot1.classList.remove("active");
-      if(dot2.classList.contains("active")) dot2.classList.remove("active");
-      if(!dot3.classList.contains("active")) dot3.classList.add("active");
-      if(dot4.classList.contains("active")) dot4.classList.remove("active");
+      limpaProgresso();
+      progressBar[2].classList.add("active");
     };
     if (slider.scrollLeft / (slider.offsetWidth * 4) >= 0.75) {
-      if(dot1.classList.contains("active")) dot1.classList.remove("active");
-      if(dot2.classList.contains("active")) dot2.classList.remove("active");
-      if(dot3.classList.contains("active")) dot3.classList.remove("active");
-      if(!dot4.classList.contains("active")) dot4.classList.add("active");
+      limpaProgresso();
+      progressBar[3].classList.add("active");
     };
-  } 
+  }
   else{
     if ((slider.scrollLeft*3) / (slider.offsetWidth) < 0.75) {
-      if(!dot1.classList.contains("active")) dot1.classList.add("active");
-      if(!dot2.classList.contains("active")) dot2.classList.add("active");
-      if(!dot3.classList.contains("active")) dot3.classList.add("active");
-      if(dot4.classList.contains("active")) dot4.classList.remove("active");
+      limpaProgresso();
+      progressBar[3].classList.remove("active");
     }
     else {
-      if(dot1.classList.contains("active")) dot1.classList.remove("active");
-      if(!dot2.classList.contains("active")) dot2.classList.add("active");
-      if(!dot3.classList.contains("active")) dot3.classList.add("active");
-      if(!dot4.classList.contains("active")) dot4.classList.add("active");
-    };
+      limpaProgresso();
+      progressBar[0].classList.remove("active");
+    }
   }
 }
 
@@ -92,4 +90,3 @@ slider.addEventListener("scroll", event => {
 document.addEventListener("DOMContentLoaded", function(){
   marcaProgresso();
 });
-
