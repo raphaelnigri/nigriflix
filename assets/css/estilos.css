@@ -28,6 +28,7 @@ body {
     padding: 0.5em 1em;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
     width: 100%;
+    height: 50px;
     position: fixed;
     z-index: 5;
 }
@@ -218,7 +219,7 @@ body {
     width: 70vw;
     height: 100vh;
     position: fixed;
-    top: 32px;
+    top: 50px;
     left: -100vw;
     transition: .25s;
     box-shadow: inset -6px 0px 10px 0px rgba(0,0,0,0.7);
@@ -234,9 +235,8 @@ body {
 .menu-lateral__logo {
     width: 118px;
     align-self: center;
-    padding-top: 16px;
 }
-  
+
 .logo--texto{
     font-family: 'Pacifico', cursive;
     margin-top: -34px;
@@ -300,6 +300,10 @@ body {
         width: 200px;
         grid-column: 1;
         grid-row: 1 / span 2;
+    }
+
+    .menu-lateral__logo {
+        padding-top: 16px;
     }
 }
 

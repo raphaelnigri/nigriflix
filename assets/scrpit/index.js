@@ -1,3 +1,15 @@
+//acessibility//
+const spanCartao = document.querySelectorAll('.cartao__info--texto');
+const spanCarousel = document.querySelectorAll('.cartao__info--texto--carrossel');
+const arr1 = Array.from(spanCartao);
+const arr2 = Array.from(spanCarousel);
+const spans = arr1.concat(arr2);
+
+
+
+
+//Carousel//
+
 const botaoMenu = document.querySelector('.cabecalho__menu')
 const menu = document.querySelector('.menu-lateral')
 
