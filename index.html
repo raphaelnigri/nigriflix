@@ -18,34 +18,35 @@
 </head>
 <body>
     <header class="cabecalho">
-        <button class="cabecalho__menu" aria-label="Menu"></button>
+        <button class="botao__menu-lateral" aria-label="Acessar Menu-lateral"></button>
+        <nav class="menu-lateral__content">
+            <p class="logo--texto">Nigriflix</p>
+            <ul>
+                <li><a href="#" class="menu-lateral__link link--inicio">Início</a></li>
+                <li><a href="#" class="menu-lateral__link link--videos menu-lateral__link--ativo">Vídeos</a></li>
+                <li><a href="#" class="menu-lateral__link link--filmes">Filmes</a></li>
+                <li><a href="#" class="menu-lateral__link link--animes">Animes</a></li>
+                <li><a href="#" class="menu-lateral__link link--seusvideos">Seus Vídeos</a></li>
+                <li><a href="#" class="menu-lateral__link link--camisas">Perfil</a></li>
+            </ul>
+        </nav>
         <div class="search-bar__container">
             <div class="search-bar">
-                <input type="search" class="search-bar__input" placeholder="Escreva sua pesquisa!" aria-label="Barra de Pesquisa">
+                <input type="search" class="search-bar__input" placeholder="Pesquise aqui..." aria-label="Barra de Pesquisa">
                 <button class="search-bar__botao" aria-label="submit search"></button>
             </div>
         </div>
-        <div class="cabecalho__perfil cabecalho__perfil--ativo" tabindex="0" aria-label="Menu do usuário">Raphael Nigri
-            <div class="perfil__dropdown">
-                <button class="dropdown__content perfil__secundario">Perfil 2</button>
-                <button class="dropdown__content perfil__secundario2">Perfil 3</button>
-                <button class="dropdown__content icon__dropdown--perfil">Gerenciar Perfis</button>
-                <button class="dropdown__content icon__dropdown--conta">Conta</button>
-                <button class="dropdown__content icon__dropdown--sair">Sair da conta</button>
+        <div class="menu-dropdown perfil__ativo--img" tabindex="0" aria-label="Menu do usuário">
+            <div class="perfil__ativo--nome">Raphael Nigri</div>
+            <div class="menu-dropdown__content">
+                <button class="menu-dropdown__item perfil__inativo perfil__inativo--Taysa">Taysa</button>
+                <button class="menu-dropdown__item perfil__inativo perfil__inativo--Juan">Juan</button>
+                <button class="menu-dropdown__item icon__dropdown--perfil">Gerenciar Perfis</button>
+                <button class="menu-dropdown__item icon__dropdown--conta">Conta</button>
+                <button class="menu-dropdown__item icon__dropdown--sair">Sair da conta</button>
             </div>
         </div>
-        <button class="cabecalho__notificacao" aria-label="Notificação"></button>
-        <nav class="menu-lateral">
-            <p class="logo--texto">Nigriflix</p>
-            <ul>
-                <li><a href="#" class="menu-lateral__link menu-lateral__link--inicio">Início</a></li>
-                <li><a href="#" class="menu-lateral__link menu-lateral__link--videos menu-lateral__link--ativo">Vídeos</a></li>
-                <li><a href="#" class="menu-lateral__link menu-lateral__link--filmes">Filmes</a></li>
-                <li><a href="#" class="menu-lateral__link menu-lateral__link--animes">Animes</a></li>
-                <li><a href="#" class="menu-lateral__link menu-lateral__link--seusvideos">Seus Vídeos</a></li>
-                <li><a href="#" class="menu-lateral__link menu-lateral__link--camisas">Perfil</a></li>
-            </ul>
-        </nav>
+        <button class="botao__notificacao" aria-label="Acessar notificações"></button>
     </header>
     <main>
         <h1>Vídeos</h1>

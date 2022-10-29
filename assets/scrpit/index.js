@@ -1,12 +1,13 @@
-const botaoMenu = document.querySelector('.cabecalho__menu')
-const menu = document.querySelector('.menu-lateral')
+//<menu lateral>//
+const botaoMenu = document.querySelector('.botao__menu-lateral')
+const menu = document.querySelector('.menu-lateral__content')
 
 botaoMenu.addEventListener('click', () => {
-    menu.classList.toggle('menu-lateral--ativo')
+    menu.classList.toggle('menu-lateral__content--ativo')
 })
 
 
-//<drag scroll on carousel//
+//drag scroll on carousel//
 const slider = document.querySelector('.slider');
 let isDown = false;
 let startX;
