@@ -119,13 +119,14 @@ body {
         border-right: 1px solid #95999C;
         cursor: pointer;
     }
-  
+
+    .cabecalho__perfil:focus-within .perfil__dropdown,
     .cabecalho__perfil:hover .perfil__dropdown  {
         display: grid;
         opacity: 0.96;
         transition: 0.25s ease-in-out;
     }
-  
+
     .perfil__dropdown{
         color: var(--font);
         background-color: var(--menu-lateral);
@@ -154,6 +155,7 @@ body {
         width: 11.5em;
     }
 
+    .dropdown__content:focus ,
     .dropdown__content:hover{
         background-color: var(--cartao);
     }
@@ -176,6 +178,7 @@ body {
         transition: 0.5s;
     }
 
+    .cabecalho__perfil:focus::after ,
     .cabecalho__perfil:hover::after {
         transform: rotate(180deg);
         transition-duration: 0.5s;
@@ -284,7 +287,7 @@ body {
     margin-bottom: 4px;
 }
 
-.menu-lateral__link--ativo , .menu-lateral__link:hover {
+.menu-lateral__link--ativo , .menu-lateral__link:hover , .menu-lateral__link:focus {
     color: var(--font);
     padding-left: 56px;
     border-left: 8px solid var(--font);
