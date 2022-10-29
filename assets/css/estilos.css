@@ -63,6 +63,7 @@ body {
 
 .search-bar__botao{
     margin-top: 3px;
+    cursor: pointer;
 }
 
 .search-bar__botao::before{
@@ -146,10 +147,11 @@ body {
     }
   
     .dropdown__content{
-        width: 11.5em;
-        display: flex;
         align-items: center;
+        cursor: pointer;
+        display: flex;
         padding: 0.5em;
+        width: 11.5em;
     }
 
     .dropdown__content:hover{
@@ -207,14 +209,9 @@ body {
         background-position: center;
     }
 
-    .gerenciar-perfis {
+    .icon__dropdown--perfil {
         border-top: 0.2em solid var(--cartao);
         margin-top: -0.3em;
-    }
-
-    .icon--dropdown{
-        font-size: 1.4em;
-        margin-right: 10px;
     }
 
     .icon__dropdown--perfil::before{
@@ -260,8 +257,12 @@ body {
     transition: .25s;
 }
 
-.menu-lateral__logo {
+.menu-lateral::before{
+    content: "";
+    height: 114px;
     width: 118px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: contain;
     align-self: center;
 }
 
@@ -330,7 +331,7 @@ body {
         grid-row: 1 / span 2;
     }
 
-    .menu-lateral__logo {
+    .logo__img {
         padding-top: 16px;
     }
 }
