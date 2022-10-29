@@ -22,21 +22,21 @@
         <div class="search-bar__container">
             <div class="search-bar">
                 <input type="search" class="search-bar__input" placeholder="Escreva sua pesquisa!" aria-label="Barra de Pesquisa">
-                <button class="search-bar__botao" aria-label="submit search"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></i></button>
+                <button class="search-bar__botao" aria-label="submit search"></button>
             </div>
         </div>
         <div class="cabecalho__perfil cabecalho__perfil--ativo">Raphael Nigri
             <div class="perfil__dropdown">
                 <div class="perfil__secundario dropdown__content">Perfil 2</div>
                 <div class="perfil__secundario2 dropdown__content">Perfil 3</div>
-                <p class="gerenciar-perfis dropdown__content"><i class="fa-solid fa-user icon--dropdown"></i>Gerenciar Perfis</p>
-                <p class="conta dropdown__content"><i class="fa-regular fa-address-card icon--dropdown"></i>Conta</p>
-                <p class="sair dropdown__content"><i class="fa-solid fa-door-open icon--dropdown"></i>Sair da conta</p>
+                <p class="gerenciar-perfis dropdown__content icon__dropdown--perfil">Gerenciar Perfis</p>
+                <p class="conta dropdown__content icon__dropdown--conta">Conta</p>
+                <p class="sair dropdown__content icon__dropdown--sair">Sair da conta</p>
             </div>
         </div>
         <button class="cabecalho__notificacao" aria-label="Notificação"></button>
         <nav class="menu-lateral">
-            <img class="menu-lateral__logo" src="assets/img/logo.png" alt="Logotipo da Nigriflix" >
+            <img class="menu-lateral__logo" src="assets/img/logo.png" alt="Logotipo da Nigriflix">
             <p class="logo--texto">Nigriflix</p>
             <a href="#" class="menu-lateral__link menu-lateral__link--inicio">Início</a>
             <a href="#" class="menu-lateral__link menu-lateral__link--videos menu-lateral__link--ativo">Vídeos</a>
@@ -49,26 +49,23 @@
     <main>
         <h1>Vídeos</h1>
         <article class="cartao cartao--destaque">
-            <img src="assets/img/banner-mobile_2.png" alt="Banner do cartao" class="cartao__imagem cartao__imagem--mobile">
-            <img src="assets/img/banner_2.png" alt="Banner do cartao" class="cartao__imagem cartao__imagem--desktop">
+            <img src="assets/img/banner-mobile_2.png" alt="Descrição da thumbnail do vídeo em destaque" class="cartao__imagem cartao__imagem--mobile">
+            <img src="assets/img/banner_2.png" alt="Descrição da thumbnail do vídeo em destaque" class="cartao__imagem cartao__imagem--desktop">
             <div class="cartao__conteudo">
                 <p class="cartao__anuncio">Vídeo em destaque</p>
                 <h3 class="cartao__titulo">Nigriflix - Título</h3>
                 <p class="cartao__autor">Autor</p>
                 <p class="cartao__info cartao__info--tempo">
-                    <i class="fa-regular fa-clock cartao__icone"></i>
-                    33
-                    <span class="cartao__info--texto">Minutos</span>
+                    <i class="fa-regular fa-clock cartao__icone" alt="Duração em minutos"></i>
+                    33<span class="cartao__info--texto">Minutos</span>
                 </p>
                 <p class="cartao__info cartao__info--visualizacao">
-                    <i class="fa-regular fa-eye cartao__icone"></i></i> 
-                    33
-                    <span class="cartao__info--texto">Visualizações</span>
+                    <i class="fa-regular fa-eye cartao__icone" alt="Visualizações"></i>
+                    33<span class="cartao__info--texto">Visualizações</span>
                 </p>
                 <p class="cartao__info cartao__info--curtidas">
-                    <i class="fa-solid fa-thumbs-up cartao__icone"></i>
-                    42
-                    <span class="cartao__info--texto">Curtidas</span>
+                    <i class="fa-solid fa-thumbs-up cartao__icone" alt="Curtidas"></i>
+                    42<span class="cartao__info--texto">Curtidas</span>
                 </p>
                 <button class="cartao__botao cartao__botao--destaque">Assistir agora</button>
             </div>
@@ -116,100 +113,88 @@
             </div>
             <div class="slider">
                 <article class="cartao cartao--carrossel">
-                    <img src="assets/img/video_1.png" alt="Vídeo" class="cartao__imagem cartao__imagem--carrossel">
+                    <img src="assets/img/video_1.png" alt="Thumbnail" class="cartao__imagem cartao__imagem--carrossel">
                     <div class="cartao__conteudo cartao__conteudo--carrossel">
                         <p class="cartao__autor">Jokerlover</p>
                         <h3 class="cartao__titulo">Nigriflix - The Joker</h3>
                         <div class="cartao__info--carrossel">
                             <p class="cartao__info cartao__info--tempo">
-                                <i class="fa-regular fa-clock cartao__icone"></i> 
-                                33
-                                <span class="cartao__info--texto--carrossel">Minutos</span>
+                                <i class="fa-regular fa-clock cartao__icone" alt="Duração em minutos"></i> 
+                                33<span class="cartao__info--texto--carrossel">Minutos</span>
                             </p>
                             <p class="cartao__info cartao__info--visualizacao">
-                                <i class="fa-regular fa-eye cartao__icone"></i></i>
-                                33
-                                <span class="cartao__info--texto--carrossel">Visualizações</span>
+                                <i class="fa-regular fa-eye cartao__icone" alt="Visualizações"></i>
+                                33<span class="cartao__info--texto--carrossel">Visualizações</span>
                             </p>
                             <p class="cartao__info cartao__info--curtidas">
-                                <i class="fa-solid fa-thumbs-up cartao__icone"></i>
-                                42
-                                <span class="cartao__info--texto--carrossel">Curtidas</span>
+                                <i class="fa-solid fa-thumbs-up cartao__icone" alt="Curtidas"></i>
+                                42<span class="cartao__info--texto--carrossel">Curtidas</span>
                             </p>
                         </div>
                         <button class="cartao__botao cartao__botao--carrossel" aria-label="Assistir agora"></button>
                     </div>
                 </article>
                 <article class="cartao cartao--carrossel">
-                    <img src="assets/img/video_2.png" alt="Vídeo" class="cartao__imagem cartao__imagem--carrossel">
+                    <img src="assets/img/video_2.png" alt="Thumbnail" class="cartao__imagem cartao__imagem--carrossel">
                     <div class="cartao__conteudo cartao__conteudo--carrossel">
                         <p class="cartao__autor">Você</p>
                         <h3 class="cartao__titulo">Nigriflix - O seu filme!</h3>
                         <div class="cartao__info--carrossel">
                             <p class="cartao__info cartao__info--tempo">
-                                <i class="fa-regular fa-clock cartao__icone"></i>
-                                33
-                                <span class="cartao__info--texto--carrossel">Minutos</span>
+                                <i class="fa-regular fa-clock cartao__icone" alt="Duração em minutos"></i>
+                                33<span class="cartao__info--texto--carrossel">Minutos</span>
                             </p>
                             <p class="cartao__info cartao__info--visualizacao">
-                                <i class="fa-regular fa-eye cartao__icone"></i></i>
-                                33
-                                <span class="cartao__info--texto--carrossel">Visualizações</span>
+                                <i class="fa-regular fa-eye cartao__icone" alt="Visualizações"></i>
+                                33<span class="cartao__info--texto--carrossel">Visualizações</span>
                             </p>
                             <p class="cartao__info cartao__info--curtidas">
-                                <i class="fa-solid fa-thumbs-up cartao__icone"></i>
-                                42
-                                <span class="cartao__info--texto--carrossel">Curtidas</span>
+                                <i class="fa-solid fa-thumbs-up cartao__icone" alt="Curtidas"></i>
+                                42<span class="cartao__info--texto--carrossel">Curtidas</span>
                             </p>
                         </div>
                         <button class="cartao__botao cartao__botao--carrossel" aria-label="Assistir agora"></button>
                     </div>
                 </article>
-                    <article class="cartao cartao--carrossel">
-                    <img src="assets/img/video_3.png" alt="Vídeo" class="cartao__imagem cartao__imagem--carrossel">
+                <article class="cartao cartao--carrossel">
+                    <img src="assets/img/video_3.png" alt="Thumbnail" class="cartao__imagem cartao__imagem--carrossel">
                     <div class="cartao__conteudo cartao__conteudo--carrossel">
                         <p class="cartao__autor">Music_man</p>
                         <h3 class="cartao__titulo">Nigriflix - Viva o Rock!</h3>
                         <div class="cartao__info--carrossel">
                             <p class="cartao__info cartao__info--tempo">
-                                <i class="fa-regular fa-clock cartao__icone"></i>
-                                33
-                                <span class="cartao__info--texto--carrossel">Minutos</span>
+                                <i class="fa-regular fa-clock cartao__icone" alt="Duração em minutos"></i>
+                                33<span class="cartao__info--texto--carrossel">Minutos</span>
                             </p>
                             <p class="cartao__info cartao__info--visualizacao">
-                                <i class="fa-regular fa-eye cartao__icone"></i></i> 
-                                33
-                                <span class="cartao__info--texto--carrossel">Visualizações</span>
+                                <i class="fa-regular fa-eye cartao__icone" alt="Visualizações"></i>
+                                33<span class="cartao__info--texto--carrossel">Visualizações</span>
                             </p>
                             <p class="cartao__info cartao__info--curtidas">
-                                <i class="fa-solid fa-thumbs-up cartao__icone"></i>
-                                42
-                                <span class="cartao__info--texto--carrossel">Curtidas</span>
+                                <i class="fa-solid fa-thumbs-up cartao__icone" alt="Curtidas"></i>
+                                42<span class="cartao__info--texto--carrossel">Curtidas</span>
                             </p>
                         </div>
                         <button class="cartao__botao cartao__botao--carrossel" aria-label="Assistir agora"></button>
                     </div>
                 </article>
-                 <article class="cartao cartao--carrossel">
-                    <img src="assets/img/video_4.png" alt="Vídeo" class="cartao__imagem cartao__imagem--carrossel">
+                <article class="cartao cartao--carrossel">
+                    <img src="assets/img/video_4.png" alt="Thumbnail" class="cartao__imagem cartao__imagem--carrossel">
                     <div class="cartao__conteudo cartao__conteudo--carrossel">
                         <p class="cartao__autor">TaysaBs</p>
                         <h3 class="cartao__titulo">Nigriflix - Sunshine</h3>
                         <div class="cartao__info--carrossel">
                             <p class="cartao__info cartao__info--tempo">
-                                <i class="fa-regular fa-clock cartao__icone"></i>
-                                33
-                                <span class="cartao__info--texto--carrossel">Minutos</span>
+                                <i class="fa-regular fa-clock cartao__icone" alt="Duração em minutos"></i>
+                                33<span class="cartao__info--texto--carrossel">Minutos</span>
                             </p>
                             <p class="cartao__info cartao__info--visualizacao">
-                                <i class="fa-regular fa-eye cartao__icone"></i></i> 
-                                33
-                                <span class="cartao__info--texto--carrossel">Visualizações</span>
+                                <i class="fa-regular fa-eye cartao__icone" alt="Visualizações"></i>
+                                33<span class="cartao__info--texto--carrossel">Visualizações</span>
                             </p>
                             <p class="cartao__info cartao__info--curtidas">
-                                <i class="fa-solid fa-thumbs-up cartao__icone"></i>
-                                42
-                                <span class="cartao__info--texto--carrossel">Curtidas</span>
+                                <i class="fa-solid fa-thumbs-up cartao__icone" alt="Curtidas"></i>
+                                42<span class="cartao__info--texto--carrossel">Curtidas</span>
                             </p>
                         </div>
                         <button class="cartao__botao cartao__botao--carrossel" aria-label="Assistir agora"></button>

@@ -53,17 +53,23 @@ body {
   
 .search-bar__input{
     width: 60vw;
-    padding: 0 0.5em;
+    padding: 0.2em 0.5em;
     background-color: var(--cartao);
 }
   
 .search-bar__input::placeholder {
     color: var(--turquesa);
 }
-  
+
 .search-bar__botao{
+    margin-top: 3px;
+}
+
+.search-bar__botao::before{
+    content: "\f002";
+    font: var(--fa-font-solid);
     font-size: 1.2rem;
-    margin: 0 8px 0 4px;
+    margin: 0px 8px 0 4px;
 }
 
 .cabecalho__notificacao::before {
@@ -146,7 +152,7 @@ body {
         padding: 0.5em;
     }
 
-     dropdown__content:hover{
+    .dropdown__content:hover{
         background-color: var(--cartao);
     }
 
@@ -210,6 +216,28 @@ body {
         font-size: 1.4em;
         margin-right: 10px;
     }
+
+    .icon__dropdown--perfil::before{
+        content: "\f007";
+        font: var(--fa-font-solid);
+        font-size: 1.4em;
+        margin-right: 10px;
+    }
+
+    .icon__dropdown--conta::before{
+        content: "\f2bb";
+        font: var(--fa-font-regular);
+        font-size: 1.4em;
+        margin-right: 10px;
+    }
+
+    .icon__dropdown--sair::before{
+        content: "\f52b";
+        font: var(--fa-font-solid);
+        font-size: 1.4em;
+        margin-right: 10px;
+    }
+
 }
 
 .menu-lateral {
