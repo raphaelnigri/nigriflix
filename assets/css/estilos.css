@@ -178,7 +178,7 @@ body {
         transition: 0.5s;
     }
 
-    .cabecalho__perfil:focus::after ,
+    .cabecalho__perfil:focus-within::after ,
     .cabecalho__perfil:hover::after {
         transform: rotate(180deg);
         transition-duration: 0.5s;
