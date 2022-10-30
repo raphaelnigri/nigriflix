@@ -330,6 +330,8 @@ body {
     font-size: 24px;
     position: absolute;
     left: 24px;
+    display: flex;
+    align-items: center;
 }
 
 .link--inicio::before {
@@ -341,19 +343,21 @@ body {
 }
 
 .link--filmes::before {
-    content: "\e90a";
+    content: "\e131";
+    font: var(--fa-font-solid);
 }
 
-.link--seusvideos::before {
-    content: "\e903";
-}
-
-.link--camisas::before {
-    content: "\e900";
+.link--series::before {
+    content: "\e163";
+    font: var(--fa-font-solid);
 }
 
 .link--animes::before {
     content: "\6761";
+}
+
+.link--seusvideos::before {
+    content: "\e903";
 }
 
 @media screen and (min-width: 1024px) {
