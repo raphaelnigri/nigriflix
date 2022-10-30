@@ -38,6 +38,16 @@ body {
     font-size: 24px;
     cursor: pointer;
 }
+
+.botao__menu-lateral--ativo{
+    font-size: 1.5rem;
+}
+
+.botao__menu-lateral--ativo::before {
+    content: "\f057";
+    font: var(--fa-font-regular);
+    cursor: pointer;
+}
   
 .search-bar__container{
     border-radius: 10px;
