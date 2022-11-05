@@ -19,7 +19,7 @@ body {
         grid-template-columns: auto 1fr;
     }
 }
-  
+
 .cabecalho {
     display: flex;
     justify-content: space-between;
