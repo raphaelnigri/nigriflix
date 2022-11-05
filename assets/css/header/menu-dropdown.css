@@ -1,0 +1,155 @@
+.menu-dropdown {
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin-left: auto;
+}
+
+.menu-dropdown:focus-within .menu-dropdown__content,
+.menu-dropdown:hover .menu-dropdown__content  {
+    display: grid;
+    opacity: 0.96;
+    animation: appear 1s ease;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu-dropdown__content{
+    background-color: var(--menu-lateral);
+    border: 0.2em solid var(--cartao);
+    border-radius: 10px;
+    color: var(--font);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+        top: 0;
+        right: 4px;
+    margin-top: 50px;
+    opacity: 0;
+    box-shadow: 6px 8px 3px 0px rgba(0,0,0,0.7);
+    z-index: 1;
+    width: 11.5em;
+    overflow: hidden;
+}
+
+.menu-dropdown__item{
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding: 0.5em;
+    width: 11.5em;
+}
+
+.menu-dropdown__item:focus ,
+.menu-dropdown__item:hover{
+    background-color: var(--cartao);
+}
+
+.menu-dropdown::after {
+    content: "\e90d";
+    color: var(--font);
+    font-size: 1.5rem;
+    transition: 0.5s;
+}
+
+.menu-dropdown::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.perfil__ativo--img::before{
+    background-image: url(../../img/profile_1.png);
+}
+
+.perfil__ativo--nome{
+    padding: 0.5em;
+    color: var(--turquesa);
+    display: none;
+}
+
+
+.menu-dropdown:focus-within::after ,
+.menu-dropdown:hover::after {
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+
+.perfil__inativo::before{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    display: block;
+    margin-right: 10px;
+    width: 32px;
+    height: 32px;
+}
+
+.perfil__inativo--Taysa::before {
+    background-image: url(../../img/profile_2.png);
+}
+
+.perfil__inativo--Juan::before {
+    background-image: url(../../img/profile_3.png);
+}
+
+.icon__dropdown--perfil {
+    border-top: 0.2em solid var(--cartao);
+    margin-top: -0.3em;
+}
+
+.icon__dropdown--perfil::before{
+    content: "\f007";
+    font: var(--fa-font-solid);
+    font-size: 1.4em;
+    margin-right: 10px;
+}
+
+.icon__dropdown--conta::before{
+    content: "\f2bb";
+    font: var(--fa-font-regular);
+    font-size: 1.4em;
+    margin-right: 10px;
+}
+
+.icon__dropdown--sair::before{
+    content: "\f52b";
+    font: var(--fa-font-solid);
+    font-size: 1.4em;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .perfil__ativo--nome{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .menu-dropdown {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 8px;
+    }
+
+    .menu-dropdown__content{
+        right: 160px;
+        margin-top: 58px;
+    }
+}

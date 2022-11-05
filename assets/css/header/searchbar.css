@@ -1,0 +1,46 @@
+  
+.search-bar__container{
+    border-radius: 10px;
+    background-color: var(--cartao);
+    border:0.2em solid var(--cartao);
+    margin-left: 10px;
+}
+  
+.search-bar{
+    justify-self: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+}
+  
+.search-bar__input{
+    width: 48vw;
+    padding: 0.2em 0.5em;
+    background-color: var(--cartao);
+}
+  
+.search-bar__input::placeholder {
+    color: var(--turquesa);
+}
+
+.search-bar__botao{
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.search-bar__botao::before{
+    content: "\f002";
+    font: var(--fa-font-solid);
+    font-size: 1.2rem;
+    margin: 0px 4px 0 4px;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .search-bar__container{
+        margin-left: 170px;
+    }
+
+    .search-bar{
+        width: 35vw;
+    }
+}

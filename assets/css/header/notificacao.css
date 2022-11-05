@@ -1,0 +1,19 @@
+
+.botao__notificacao{
+    border-left: 1px solid #95999C;
+    padding-left: 2vw;
+    margin-left: 10px;
+    display: none;
+}
+
+.botao__notificacao::before {
+    cursor: pointer;
+    content: "\e906";
+    font-size: 24px;
+}
+
+@media screen and (min-width: 375px) {
+    .botao__notificacao{
+        display: block;
+    }
+}

@@ -1,0 +1,124 @@
+
+.botao__menu-lateral::before {
+    content: "\e904";
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.botao__menu-lateral--ativo{
+    font-size: 1.5rem;
+}
+
+.botao__menu-lateral--ativo::before {
+    content: "\f057";
+    font: var(--fa-font-regular);
+    cursor: pointer;
+}
+
+.menu-lateral__content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--menu-lateral);
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    top: 50px;
+    left: -100vw;
+    transition: .25s;
+    box-shadow: inset -6px 0px 10px 0px rgba(0,0,0,0.7);
+    overflow-y: auto;
+    z-index: 4;
+}
+
+.menu-lateral__content--ativo {
+    left: 0;
+    transition: .25s;
+}
+
+.menu-lateral__content::before{
+    content: "";
+    height: 114px;
+    width: 118px;
+    background: url(../../img/logo.png) no-repeat;
+    background-size: contain;
+    align-self: center;
+}
+
+.logo--texto{
+    font-family: 'Pacifico', cursive;
+    margin-top: -34px;
+    margin-bottom: 24px;
+    font-size: 1.2em;
+    align-self: center;
+    transform: rotate(-24deg);
+}
+
+.menu-lateral__link {
+    height: 64px;
+    color: var(--turquesa);
+    padding-left: 64px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.menu-lateral__link--ativo , .menu-lateral__link:hover , .menu-lateral__link:focus {
+    color: var(--font);
+    padding-left: 56px;
+    border-left: 8px solid var(--font);
+}
+
+.menu-lateral__link::before {
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    position: absolute;
+    left: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.link--inicio::before {
+    content: "\e902";
+}
+
+.link--videos::before {
+    content: "\e90e";
+}
+
+.link--filmes::before {
+    content: "\e131";
+    font: var(--fa-font-solid);
+}
+
+.link--series::before {
+    content: "\e163";
+    font: var(--fa-font-solid);
+}
+
+.link--animes::before {
+    content: "\6761";
+}
+
+.link--seusvideos::before {
+    content: "\e903";
+}
+
+@media screen and (min-width: 1024px) {
+
+    .botao__menu-lateral{
+        display: none;
+    }
+
+    .menu-lateral__content {
+        top: 0;
+        left: 0;
+        width: 200px;
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .logo__img {
+        padding-top: 16px;
+    }
+}
