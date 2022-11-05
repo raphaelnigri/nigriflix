@@ -1,25 +1,27 @@
 export class Perfil {
     static numeroDePerfis = 0;
- 
+    #nome;
+    #foto;
+
     constructor(nome){
-        this._nome = nome;
-        this._foto = 'foto';
+        this.#nome = nome;
+        this.#foto = 'foto';
         Perfil.numeroDePerfis += 1;
     }
 
     trocaNome(novoNome){
-        this._nome = novoNome;
+        this.#nome = novoNome;
     }
 
     trocaFoto(novaFoto){
-        this._foto = novaFoto;
+        this.#foto = novaFoto;
     }
 
     get foto(){
-        return this._foto;
+        return this.#foto;
     }
 
     get nome(){
-        return this._nome;
+        return this.#nome;
     }
 }

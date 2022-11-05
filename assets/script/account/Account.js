@@ -2,38 +2,48 @@ import {Perfil} from "./Perfil.js"
 
 export class Account{
     static numeroDeContas = 0;
+    #login;
+    #senha;
+    #perfis;
 
     constructor(email,senha){
         const emailFormatado = email.replace(/@.*$/g, '')
-        this._login = email;
-        this._senha = senha;
-        this._perfil = new Perfil(emailFormatado);
+        this.#login = email;
+        this.#senha = senha;
+        this.#perfis = [new Perfil(emailFormatado)];
         Account.numeroDeContas += 1;
     }
 
     trocaSenha(novoValor){
-        this._senha = novoValor;
+        this.#senha = novoValor;
     }
 
     trocaLogin(novoValor){
-        this._login = novoValor;
+        this.#login = novoValor;
     }
 
-    set perfil(novoValor){
-        if(novoValor instanceof Perfil){
-            this._perfil = novoValor;
-        }
-    }
-
-    get perfil(){
-        return this._perfil;
+    get perfis(){
+        return this.#perfis;
     }
 
     addPerfil(nome){
-
+        this.#perfis.push(new Perfil(nome));
+        Perfil.numeroDePerfis += 1;
     }
 
-    removePerfil(nome){
+    removePerfil(pos){
+        this.#perfis.splice(pos, 1);
+        Perfil.numeroDePerfis -= 1;
+    }
 
+    autentica(login,senha){
+        let mensagem = "";
+
+        if (login == this.#login && senha == this.#senha){
+            return true;
+        } else{
+            mensagem = "Login ou senha não são válidos";
+            return false;
+        }
     }
 }
