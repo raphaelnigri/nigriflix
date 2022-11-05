@@ -1,0 +1,119 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', 'icones', sans-serif;
+    color: var(--font);
+    background: var(--background);
+    text-align: center;
+}
+
+.form__container {
+    width: 80vw;
+    max-width: 450px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.6);
+    border-radius: var(--border-radius);
+    background: var(--cartao);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.title--form{
+    font-size: 1.5rem;
+    font-weight: bold;
+    grid-column: span 2;
+    margin-bottom: 16px;
+}
+
+.form__error__message{
+    grid-column: span 2;
+    color: brown;
+}
+
+.input__wrapper{
+    width: 100%;
+    margin-inline: auto;
+    grid-column: span 2;
+}
+
+.login__label--checkbox{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+}
+
+.login__input{
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    box-sizing:border-box;
+    color: black;
+    outline: none;
+}
+
+.login__input:focus{
+    border: 4px solid var(--botao);
+    padding: calc(1rem - 4px) calc(2rem - 4px);
+}
+
+.form__button {
+    width: 100%;
+    margin-inline: auto;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--font);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    background: var(--botao);
+    grid-column: span 2;
+    margin-top: 16px;
+}
+
+.form__button:hover, .form__button:focus {
+    background: var(--turquesa);
+}
+
+.form__link {
+    color: var(--link);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover, .form__link:focus {
+    text-decoration: underline;
+    color: var(--turquesa);
+    outline: none;
+}
+
+.form__link--conta{
+    grid-column: span 2;
+    margin-top: 16px;
+    width: 180px;
+    margin-inline: auto;
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        display: unset;
+    }
+    
+    .form__container {
+        width: unset;
+        margin: unset;
+        padding: 1rem;
+    }
+}
+
+.off{
+    display: none;
+}

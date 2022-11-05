@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nigri | Portifólio | Nigriflix | Login</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/reset.css">
+        <link rel="stylesheet" href="assets/css/cor.css">
+        <link rel="stylesheet" href="assets/css/login/login.css">
+    </head>
+    <body>
+        <form class="form__container" id="login">
+            <h1 class="title--form">Login</h1>
+            <p class="form__error__message off">Login ou senha inválido.</p>
+            <div class="input__wrapper">
+                <label aria-label="Login" for="email__login"></label>
+                <input class="login__input" data-tipo="email__login" id="email__login" type="email" required placeholder="Insira seu email..." autofocus>
+            </div>
+            <div class="input__wrapper">
+                <label aria-label="Senha" for="senha__login"></label>
+                <input class="login__input" data-tipo="senha__login" id="senha__login" type="password" required placeholder="Insira sua senha...">
+            </div>
+            <input class="form__button" type="submit" value="Entrar">
+            <label class="login__label--checkbox" for="lembrar">Lembre-se de mim.
+                <input id="lembrar" type="checkbox" checked>
+            </label>
+            <a href="#" class="form__link">Precisa de ajuda?</a>
+            <p class="form__link--conta">Não possui uma conta?<a href="#" class="form__link" id="link__to__newAcc"> Vamos criar uma!</a></p>
+        </form>
+        <form class="form__container off" id="newACC">
+            <h1 class="title--form">Nova Conta</h1>
+            <div class="input__wrapper">
+                <label aria-label="Login" for="email__newACC"></label>
+                <input class="login__input" data-tipo="email__newACC" id="email__newACC" type="email" required placeholder="Insira seu email..." autofocus>
+            </div>
+            <div class="input__wrapper">
+                <label aria-label="Confirme seu email." for="confirma__email"></label>
+                <input class="login__input" data-tipo="confirma__email" id="confirma__email" type="email" required placeholder="Confirme seu email...">
+            </div>
+            <div class="input__wrapper">
+                <label aria-label="Senha" for="senha__newACC"></label>
+                <input class="login__input" data-tipo="senha__newACC" id="senha__newACC" type="password" required placeholder="Insira sua senha...">
+            </div>
+            <input class="form__button" type="submit" value="Cadastrar">
+            <p class="form__link--conta">Já possui uma conta?<a href="#" class="form__link" id="link__to__login"> Faça seu login!</a></p>
+        </form>
+        <script src="assets/script/form.js"></script>
+    </body>
+</html>
