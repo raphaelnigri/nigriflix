@@ -96,6 +96,13 @@ h2 {
     display: none;
 }
 
+@media screen and (min-width: 370px) {
+    .cartao__info--texto{
+        margin-left: 4px;
+        display: block;
+    }
+}
+
 .cartao__icone{
     margin-right: 8px;
     font-size: 0.9em;
@@ -103,13 +110,6 @@ h2 {
 
 .cartao__info--curtidas{
     grid-row: 5;
-}
-
-@media screen and (min-width: 370px) {
-    .cartao__info--texto{
-        margin-left: 4px;
-        display: block;
-    }
 }
 
 .cartao__botao {
@@ -140,6 +140,10 @@ h2 {
     cursor: pointer;
     background-color: var(--turquesa);
     transition: 0.25s ease-in-out;
+}
+
+.cartao--recentes {
+    display: none;
 }
 
 @media screen and (min-width: 1024px) {
@@ -179,13 +183,7 @@ h2 {
         max-height: 450px;
         display: block;
     }
-}
 
-.cartao--recentes {
-    display: none;
-}
-
-@media screen and (min-width: 1024px) {
     .cartao--recentes {
         display: grid;
         grid-template-columns: auto auto;
@@ -238,7 +236,7 @@ h2 {
         color: var(--info);
     }
 }
-  
+
 .videos__container{
     display: grid;
     grid-template-columns: auto 1fr;
