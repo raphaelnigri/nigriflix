@@ -4,15 +4,19 @@
 
 import{Account} from "./Account.js"
 
+const contas = [];
 
-console.log("Bem vindo");
+function criaConta(login,senha){
+    contas.push(new Account (login, senha))
+}
 
-const test = new Account('link@link', 123)
-console.log(test)
-console.log(test.perfis)
+function validaLogin(login, senha){
+    for(let i of contas) {  
+        console.log(i.autentica(login,senha));
+    }
+}
 
-test.addPerfil('batata')
-console.log(test.perfis)
-
-
-console.log(test.perfis[0].nome)
+criaConta('link@link',321)
+criaConta('test@test',423)
+criaConta('bobo@bobo',321)
+validaLogin('link@link',321)

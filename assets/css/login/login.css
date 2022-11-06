@@ -9,6 +9,18 @@ body {
     text-align: center;
 }
 
+.logo--texto{
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+        top: 0;
+        left: 0;
+    margin: 2.25rem 0px 0px 0.8rem;
+    font-size: 2.2rem;
+    transform: rotate(-24deg);
+    text-align: left;
+    width: 100px;
+}
+
 .form__container {
     width: 80vw;
     max-width: 450px;
@@ -111,6 +123,11 @@ body {
         width: unset;
         margin: unset;
         padding: 1rem;
+    }
+
+    .logo--texto{
+        margin-top: 1rem;
+        font-size: 1.2rem;
     }
 }
 
