@@ -37,13 +37,22 @@ export class Account{
     }
 
     autentica(login,senha){
-        let mensagem = "";
-
         if (login == this.#login && senha == this.#senha){
             return true;
         } else{
-            mensagem = "Login ou senha não são válidos";
             return false;
         }
+    }
+
+    checaCadastroRepetido(login){
+        if (login == this.#login){
+            return true;
+        } else{
+            return false;
+        }
+    }
+
+    get login(){
+        return this.#login;
     }
 }

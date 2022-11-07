@@ -9,12 +9,12 @@ body {
     text-align: center;
 }
 
-.logo--texto{
+.logo__texto{
     font-family: 'Pacifico', cursive;
     position: absolute;
         top: 0;
         left: 0;
-    margin: 2.25rem 0px 0px 0.8rem;
+    margin: 2.25rem 0px 0px 0.5rem;
     font-size: 2.2rem;
     transform: rotate(-24deg);
     text-align: left;
@@ -116,7 +116,7 @@ body {
 
 @media screen and (max-width: 450px) {
     body {
-        display: unset;
+        display: block;
     }
     
     .form__container {
@@ -125,7 +125,11 @@ body {
         padding: 1rem;
     }
 
-    .logo--texto{
+    .form__container--contacriada{
+        margin: 40vh 20px 0px 20px;
+    }
+
+    .logo__texto{
         margin-top: 1rem;
         font-size: 1.2rem;
     }
