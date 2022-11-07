@@ -1,5 +1,6 @@
-//problema 6: salvar contas no browser
-//problema 7: autenticação em 2 fatores.
+//problema 6: salvar contas no browser.
+//problema 7: carregar foto do perfil e nome do perfil.
+//problema 8: autenticação em 2 fatores.
 
 import{Account} from "./account/Account.js"
 const contas = [];
