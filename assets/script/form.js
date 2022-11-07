@@ -16,40 +16,56 @@ document.addEventListener("DOMContentLoaded", ()=>{
         evento.preventDefault();
         loginForm.classList.toggle("off");
         newAccForm.classList.toggle("off");
+        apagaMensagem(newAccForm);
     });
     
     document.getElementById('link__to__newAcc').addEventListener("click", (evento)=>{
         evento.preventDefault();
         loginForm.classList.toggle("off");
         newAccForm.classList.toggle("off");
+        apagaMensagem(loginForm);
     });
 
     document.getElementById('link__contaCriada').addEventListener("click", (evento)=>{
         evento.preventDefault();
         loginForm.classList.remove("off");
         contaCriada.classList.add("off");
+        apagaMensagem(newAccForm);
     });
 
     //Login//
     loginForm.addEventListener("submit", (evento)=>{
         evento.preventDefault();
-        if(validaLogin(evento.target.elements["email__login"].value , evento.target.elements["senha__login"].value)){
+        let login = evento.target.elements["email__login"];
+        let senha = evento.target.elements["senha__login"];        
+        if('valid' == validaLogin(login.value,senha.value)){
+            window.location.href = "./videos.html";
         } else {
             mostraMensagem(loginForm,"Senha incorreta, tente novamente");
+            senha.value = '';
         }
     })
 
     //Criação de Conta//
     newAccForm.addEventListener("submit", (evento)=>{
         evento.preventDefault();
-        let login = evento.target.elements["email__newACC"].value
-        let senha = evento.target.elements["senha__newACC"].value
-        if(login != validaConta(login)){
-            criaConta(login,senha);
-            newAccForm.classList.add("off");
-            contaCriada.classList.remove("off");
-        } else {
-            mostraMensagem(newAccForm,"Conta já cadastrada");
+        let login = evento.target.elements["email__newACC"];
+        let confirmado = evento.target.elements["confirma__email"];
+        let senha = evento.target.elements["senha__newACC"];
+
+        if(login.value == confirmado.value){
+            if(login.value != validaNovaConta(login.value)){
+                criaConta(login.value,senha.value);
+                newAccForm.classList.add("off");
+                contaCriada.classList.remove("off");
+            } else{
+                mostraMensagem(newAccForm,"Conta já cadastrada");
+                senha.value = '';
+                confirmado.value = '';
+            }
+        } else{
+            mostraMensagem(newAccForm,"Email e Confirmação de email são diferentes.");
+            confirmado.value = '';
         }
     })
 })
@@ -60,17 +76,23 @@ function mostraMensagem(form, message){
     error.textContent = message;
 }
 
+function apagaMensagem(form){
+    let error = form.querySelector('.form__error__message');
+    error.classList.remove('off');
+    error.textContent = '';
+}
+
 function validaLogin(login, senha){
     for(let i of contas){  
         if(i.autentica(login,senha)){
             //console.log(i.perfis[0].nome);
             //console.log(i.perfis[0].foto);
-            return window.location.href = "./videos.html";
+            return 'valid';
         }
     }
 }
 
-function validaConta(login){
+function validaNovaConta(login){
     for(let i of contas){
         if(i.checaCadastroRepetido(login)){
             return i.login;
