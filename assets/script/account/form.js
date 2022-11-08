@@ -1,4 +1,4 @@
-//problema 6: salvar contas no browser.
+//problema 6: salvar contas.
 //problema 7: carregar foto do perfil e nome do perfil.
 //problema 8: autenticação em 2 fatores.
 
