@@ -38,11 +38,22 @@
                     <button class="search-bar__botao" aria-label="submit search"></button>
                 </div>
             </div>
-            <div class="menu-dropdown perfil__ativo--img" tabindex="0" aria-label="Menu do usuário" role="button">
-                <div class="perfil__ativo--nome">Raphael Nigri</div>
+            <div class="menu-dropdown" tabindex="0" aria-label="Menu do usuário" role="button">
+                <div class="perfil" id="perfil__ativo">
+                    <img class="perfil__img" src="assets/img/profile_1.png">
+                    <div class="perfil__nome--ativo">Raphael Nigri</div>
+                </div>
                 <div class="menu-dropdown__content">
-                    <button class="menu-dropdown__item perfil__inativo perfil__inativo--Taysa">Taysa</button>
-                    <button class="menu-dropdown__item perfil__inativo perfil__inativo--Juan">Juan</button>
+                    <div id="perfis__inativos">
+                        <button class="menu-dropdown__item">
+                            <img class="perfil__img" src="assets/img/profile_2.png">
+                            <div class="perfil__nome--inativo">Taysa</div>
+                        </button>
+                        <button class="menu-dropdown__item">
+                            <img class="perfil__img" src="assets/img/profile_3.png">
+                            <div class="perfil__nome--inativo">Juan</div>
+                        </button>
+                    </div>
                     <button class="menu-dropdown__item icon__dropdown--perfil">Gerenciar Perfis</button>
                     <button class="menu-dropdown__item icon__dropdown--conta">Conta</button>
                     <button class="menu-dropdown__item icon__dropdown--sair">Sair da conta</button>

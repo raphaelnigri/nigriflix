@@ -62,50 +62,30 @@
     transition: 0.5s;
 }
 
-.menu-dropdown::before {
-    content: "";
-    display: block;
-    width: 32px;
-    height: 32px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.perfil__ativo--img::before{
-    background-image: url(../../img/profile_1.png);
-}
-
-.perfil__ativo--nome{
-    padding: 0.5em;
-    color: var(--turquesa);
-    display: none;
-}
-
-
 .menu-dropdown:focus-within::after ,
 .menu-dropdown:hover::after {
     transform: rotate(180deg);
     transition-duration: 0.5s;
 }
 
-.perfil__inativo::before{
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    content: "";
+.perfil__img{
     display: block;
-    margin-right: 10px;
     width: 32px;
     height: 32px;
 }
 
-.perfil__inativo--Taysa::before {
-    background-image: url(../../img/profile_2.png);
+.perfil{
+    display: flex;
 }
 
-.perfil__inativo--Juan::before {
-    background-image: url(../../img/profile_3.png);
+.perfil__nome--ativo{
+    padding: 0.5em;
+    color: var(--turquesa);
+    display: none;
+}
+
+.perfil__nome--inativo{
+    margin-left: 10px;
 }
 
 .icon__dropdown--perfil {
@@ -135,7 +115,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .perfil__ativo--nome{
+    .perfil__nome--ativo{
         display: block;
     }
 }
