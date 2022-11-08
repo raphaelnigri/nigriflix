@@ -1,4 +1,3 @@
-//<menu lateral>//
 const botaoMenu = document.querySelector('.botao__menu-lateral')
 const menu = document.querySelector('.menu-lateral__content')
 

@@ -2,7 +2,7 @@
 //problema 7: carregar foto do perfil e nome do perfil.
 //problema 8: autenticação em 2 fatores.
 
-import{Account} from "./account/Account.js"
+import{Account} from "./Account.js"
 const contas = [];
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         evento.preventDefault();
         let login = evento.target.elements["email__login"];
         let senha = evento.target.elements["senha__login"];        
-        if('valid' == validaLogin(login.value,senha.value)){
+        if(validaLogin(login.value,senha.value) == 'valid'){
             window.location.href = "./videos.html";
         } else {
             mostraMensagem(loginForm,"Senha incorreta, tente novamente");
