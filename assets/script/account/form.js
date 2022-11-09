@@ -1,4 +1,3 @@
-//problema 5: impedir que a pessoa passe pra página seguinte sem estar logado.
 //problema 6: salvar contas.
 //problema 7: carregar foto do perfil e nome do perfil.
 //problema 8: autenticação em 2 fatores.
@@ -40,6 +39,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         let login = evento.target.elements["email__login"];
         let senha = evento.target.elements["senha__login"];        
         if(validaLogin(login.value,senha.value) == 'valid'){
+            sessionStorage.setItem('status','logged'); // Por favor, leia o arquivo loginValidation.js antes de usar essa linha. Read the loginValidation.js file before using this line.
             window.location.href = "./videos.html";
         } else {
             mostraMensagem(loginForm,"Senha incorreta, tente novamente");
