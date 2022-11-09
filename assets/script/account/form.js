@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if(login.value == confirmado.value){
             if(login.value != validaNovaConta(login.value)){
                 criaConta(login.value,senha.value);
+                login.value = '';
+                senha.value = '';
+                confirmado.value = '';
                 newAccForm.classList.add("off");
                 contaCriada.classList.remove("off");
             } else{
