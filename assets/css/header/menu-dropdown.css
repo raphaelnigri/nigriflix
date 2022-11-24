@@ -86,6 +86,7 @@
 
 .perfil__nome--inativo{
     margin-left: 10px;
+    cursor: pointer;
 }
 
 .icon__dropdown--perfil {
